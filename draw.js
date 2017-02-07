@@ -62,14 +62,14 @@ window.onload = function() {
 
 
   // Close the WebSocket connection when the close button is clicked.
-  closeBtn.onclick = function(e) {
-    e.preventDefault();
-
-    // Close the WebSocket.
-    socket.close();
-
-    return false;
-  };
+  // closeBtn.onclick = function(e) {
+  //   e.preventDefault();
+  //
+  //   // Close the WebSocket.
+  //   socket.close();
+  //
+  //   return false;
+  // };
 
 };
 
