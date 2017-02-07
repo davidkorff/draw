@@ -1,4 +1,18 @@
-//addCanvas()
+window.onload = function() {
+
+  // Get references to elements on the page.
+  var form = document.getElementById('message-form');
+  var messageField = document.getElementById('message');
+  var messagesList = document.getElementById('messages');
+  var socketStatus = document.getElementById('status');
+  var closeBtn = document.getElementById('close');
+
+  var socket = new WebSocket('ws:https://davidkorff.github.io/draw/');
+  socket.onopen = function(event) {
+  socketStatus.innerHTML = 'Connected to: ' + event.currentTarget.URL;
+  socketStatus.className = 'open';
+};
+}
 
 x=null
 y=null
