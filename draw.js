@@ -9,7 +9,7 @@ window.onload = function() {
 
 
   // Create a new WebSocket.
-  var socket = new WebSocket('ws://echo.websocket.org');
+  var socket = new WebSocket('ws://davidkorff.github.io/draw/');
 
 
   // Handle any errors that occur.
