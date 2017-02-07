@@ -7,12 +7,15 @@ window.onload = function() {
   var socketStatus = document.getElementById('status');
   var closeBtn = document.getElementById('close');
 
-  var socket = new WebSocket('https://davidkorff.github.io/draw/');
-  socket.onopen = function(event) {
-  socketStatus.innerHTML = 'Connected to: ' + event.currentTarget.URL;
-  socketStatus.className = 'open';
-};
-}
+
+  // Create a new WebSocket.
+  var socket = new WebSocket('ws://echo.websocket.org');
+
+
+  // Handle any errors that occur.
+  socket.onerror = function(error) {
+    console.log('WebSocket Error: ' + error);
+  };
 
 x=null
 y=null
