@@ -9,7 +9,7 @@ window.onload = function() {
 
 
   // Create a new WebSocket.
-  var socket = new WebSocket('ws://davidkorff.github.io/draw/');
+  var socket = new WebSocket('wss://davidkorff.github.io/draw/');
 
 
   // Handle any errors that occur.
@@ -96,7 +96,6 @@ function addCanvas(){
   canv.setAttribute("id", "myCanvas");
   //var c=document.getElementById("canvasID");
 }
-
 
 function removeCanvas(){
   var elem = document.getElementById("myCanvas");
