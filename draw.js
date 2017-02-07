@@ -9,7 +9,7 @@ window.onload = function() {
 
 
   // Create a new WebSocket.
-  var socket = new WebSocket('wss://davidkorff.github.io/draw/');
+  var socket = new WebSocket('ws://davidkorff.github.io/draw/');
 
 
   // Handle any errors that occur.
@@ -23,6 +23,7 @@ y=null
 oldX=null
 oldY=null
 continueDraw=false
+color ='blue'
 
 function getMousePos(canvas, evt) {
   var rect = canvas.getBoundingClientRect();
@@ -69,7 +70,7 @@ function draw(){
   ctx.moveTo(x,y);
   ctx.lineTo(oldX,oldY);
   ctx.lineWidth=5;
-  ctx.fillStyle = "black";
+  context.strokeStyle = color;
   ctx.fill();
   ctx.stroke();
   ctx.closePath();
@@ -83,10 +84,6 @@ function clearScreen(e){
   if (e.which===99){
     context.clearRect(0, 0, canvas.width, canvas.height)
     toggleDraw()
-    //removeCanvas()
-    //setTimeout(addCanvas, 1000)
-    //addCanvas()
-    //debugger
   }
 
 }
