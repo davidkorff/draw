@@ -16,6 +16,7 @@ window.onload = function() {
   socket.onerror = function(error) {
     console.log('WebSocket Error: ' + error);
   };
+}
 
 x=null
 y=null
