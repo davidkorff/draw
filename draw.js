@@ -58,7 +58,7 @@ window.onload = function() {
   //   messageField.value = '';
   //
   //   return false;
-  };
+  // };
 
 
   // Close the WebSocket connection when the close button is clicked.
