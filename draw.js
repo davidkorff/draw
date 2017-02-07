@@ -7,7 +7,7 @@ window.onload = function() {
   var socketStatus = document.getElementById('status');
   var closeBtn = document.getElementById('close');
 
-  var socket = new WebSocket('ws:https://davidkorff.github.io/draw/');
+  var socket = new WebSocket('https://davidkorff.github.io/draw/');
   socket.onopen = function(event) {
   socketStatus.innerHTML = 'Connected to: ' + event.currentTarget.URL;
   socketStatus.className = 'open';
