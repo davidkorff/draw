@@ -25,7 +25,7 @@ function getMousePos(canvas, event) {
 }
 
 canvas.addEventListener('mousedown', function() { continueDraw=true })
-canvas.addEventListener('mouseup', function() { continueDraw=false })
+document.addEventListener('mouseup', function() { continueDraw=false })
 
 function draw(){
   ctx.beginPath()
