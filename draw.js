@@ -7,6 +7,8 @@ color ='blue'
 canvas = document.getElementById('myCanvas')
 ctx = canvas.getContext('2d')
 
+
+
 canvas.addEventListener('mousemove', function(event) {
   getMousePos(canvas, event)
 })
@@ -22,11 +24,8 @@ function getMousePos(canvas, event) {
     }
 }
 
-canvas.addEventListener('click', toggleDraw)
-
-function toggleDraw(){
-  continueDraw = continueDraw === true ? false : true
-}
+canvas.addEventListener('mousedown', function() { continueDraw=true })
+canvas.addEventListener('mouseup', function() { continueDraw=false })
 
 function draw(){
   ctx.beginPath()
